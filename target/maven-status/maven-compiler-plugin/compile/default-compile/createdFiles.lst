@@ -1,10 +1,6 @@
-com/miguno/ksql/udfdemo/udaf/Collect$1.class
-com/miguno/ksql/udfdemo/udaf/ListSumUdaf$1.class
+com/miguno/ksql/udfdemo/udaf/AverageUdaf$1.class
+com/miguno/ksql/udfdemo/udaf/AverageUdaf.class
 com/miguno/ksql/udfdemo/udf/MultiplyUdf.class
-com/miguno/ksql/udfdemo/udaf/SumUdaf$1.class
-com/miguno/ksql/udfdemo/udaf/SumUdaf$3.class
-com/miguno/ksql/udfdemo/udaf/Collect.class
-com/miguno/ksql/udfdemo/udaf/SumUdaf$4.class
-com/miguno/ksql/udfdemo/udaf/SumUdaf$2.class
-com/miguno/ksql/udfdemo/udaf/SumUdaf.class
-com/miguno/ksql/udfdemo/udaf/ListSumUdaf.class
+com/miguno/ksql/udfdemo/udaf/AverageUdaf$2.class
+com/miguno/ksql/udfdemo/udaf/AverageUdaf$3.class
+com/miguno/ksql/udfdemo/udaf/AverageUdaf$4.class

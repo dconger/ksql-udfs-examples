@@ -38,19 +38,6 @@ public class AverageUdafTest {
   }
 
   @Test
-  public void shouldAverageInts() {
-    final TableUdaf<Integer, Struct, Double> udaf = AverageUdaf.averageInt();
-    Struct agg = udaf.initialize();
-    final int[] values = new int[] {1, 1, 1, 1, 1};
-    for (final int thisValue : values) {
-      agg = udaf.aggregate(thisValue, agg);
-    }
-    final double avg = udaf.map(agg);
-
-    assertThat(1.0, equalTo(avg));
-  }
-
-  @Test
   public void shouldAverageDoubles() {
     final TableUdaf<Double, Struct, Double> udaf = AverageUdaf.averageDouble();
     Struct agg = udaf.initialize();
@@ -64,39 +51,12 @@ public class AverageUdafTest {
   }
 
   @Test
-  public void shouldAverageZeroes() {
-    final TableUdaf<Integer, Struct, Double> udaf = AverageUdaf.averageInt();
-    Struct agg = udaf.initialize();
-    final int[] values = new int[] {0, 0, 0};
-    for (final int thisValue : values) {
-      agg = udaf.aggregate(thisValue, agg);
-    }
-    final double avg = udaf.map(agg);
-
-    assertThat(0.0, equalTo(avg));
-  }
-
-  @Test
   public void shouldAverageEmpty() {
     final TableUdaf<Integer, Struct, Double> udaf = AverageUdaf.averageInt();
     final Struct agg = udaf.initialize();
     final double avg = udaf.map(agg);
 
     assertThat(0.0, equalTo(avg));
-  }
-
-  @Test
-  public void shouldIgnoreNull() {
-    final TableUdaf<Integer, Struct, Double> udaf = AverageUdaf.averageInt();
-    Struct agg = udaf.initialize();
-    final Integer[] values = new Integer[] {1, 1, 1};
-    for (final int thisValue : values) {
-      agg = udaf.aggregate(thisValue, agg);
-    }
-    agg = udaf.aggregate(null, agg);
-    final double avg = udaf.map(agg);
-
-    assertThat(1.0, equalTo(avg));
   }
 
   @Test

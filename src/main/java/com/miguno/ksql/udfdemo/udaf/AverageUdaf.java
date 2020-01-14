@@ -1,5 +1,6 @@
 package com.miguno.ksql.udfdemo.udaf;
 
+import io.confluent.ksql.function.udaf.Udaf;
 import io.confluent.ksql.function.udaf.TableUdaf;
 import io.confluent.ksql.function.udaf.UdafDescription;
 import io.confluent.ksql.function.udaf.UdafFactory;
