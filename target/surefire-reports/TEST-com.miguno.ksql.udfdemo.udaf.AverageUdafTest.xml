@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" time="0.015" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" time="0.022" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.102-b14"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/danielconger/desktop/ksql-udf-examples"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/danielconger/Desktop/ksql-udf-examples"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -61,10 +61,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageDoubles" time="0.013"/>
-  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageEmpty" time="0"/>
+  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageDoubles" time="0.018"/>
+  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageEmpty" time="0.001"/>
   <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageLongs" time="0.001"/>
-  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAggregateLongs" time="0"/>
-  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldMergeAverages" time="0.001"/>
-  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldUndoSummedCountedValues" time="0"/>
+  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAggregateLongs" time="0.001"/>
+  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldMergeAverages" time="0"/>
+  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldUndoSummedCountedValues" time="0.001"/>
 </testsuite>
