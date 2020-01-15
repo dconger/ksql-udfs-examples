@@ -44,7 +44,7 @@ public class BrianUdafTest {
 			.build();
 
     Struct beforeStruct = new Struct(beforeSchema)
-        .put("UID", "123");
+        .put("UID", "456");
 
     Struct afterStruct = new Struct(afterSchema)
         .put("UID", "123");
@@ -53,5 +53,13 @@ public class BrianUdafTest {
       .put("BEFORE", beforeStruct)
       .put("AFTER", afterStruct)
   		.put("OP", "d");
+
+    assertThat(udaf.initialize()).isEqualTo(agg);
+
+    List<Struct> expected = new ArrayList<Struct>();
+
+    expected.add(0, afterStruct);
+
+    assertThat(udaf.aggregate(debeziumStruct, agg)).isEqualTo(expected);
   }
 }
