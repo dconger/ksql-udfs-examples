@@ -28,6 +28,11 @@ public class SumUdaf {
       }
 
       @Override
+      public Long map(final Long aggregate) {
+        return aggregate;
+      }
+
+      @Override
       public Long merge(final Long aggOne, final Long aggTwo) {
         return aggOne + aggTwo;
       }

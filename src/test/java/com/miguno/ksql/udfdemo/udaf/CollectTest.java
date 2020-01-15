@@ -15,7 +15,7 @@ public class CollectTest {
   @Test
   public void shouldCollectValues() {
     // Given
-    TableUdaf<String, List<String>> udaf = Collect.create();
+    TableUdaf<String, List<String>, List<String>> udaf = Collect.create();
 
     List<String> agg = new ArrayList<String>();
     // When/Then

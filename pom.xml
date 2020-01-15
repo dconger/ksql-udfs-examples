@@ -25,7 +25,7 @@
 
   <properties>
     <assertj.version>3.11.1</assertj.version>
-    <confluent.version>5.3.1</confluent.version>
+    <confluent.version>5.5.0-SNAPSHOT</confluent.version>
     <exec.mainClass>com.miguno.ksql.udfdemo.ThisIsIgnored</exec.mainClass>
     <java.version>1.8</java.version>
     <junit.version>4.12</junit.version>
@@ -38,11 +38,23 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>io.confluent.ksql</groupId>
-      <artifactId>ksql-udf</artifactId>
-      <version>${confluent.version}</version>
+      <dependency>
+          <groupId>io.confluent.ksql</groupId>
+          <artifactId>ksql-udf</artifactId>
+          <version>${confluent.version}</version>
       </dependency>
+      <dependency>
+          <groupId>org.apache.kafka</groupId>
+          <artifactId>connect-api</artifactId>
+          <version>${kafka.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.kafka</groupId>
+          <artifactId>connect-runtime</artifactId>
+          <version>${kafka.version}</version>
+      </dependency>
+
 
       <!-- Test dependencies -->
       <dependency>
