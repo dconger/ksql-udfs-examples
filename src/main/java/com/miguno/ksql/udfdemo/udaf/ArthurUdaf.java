@@ -11,10 +11,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.BinaryOperator;
 
-@UdafDescription(name = "collect", description = "collect")
+@UdafDescription(name = "arthur", description = "arthur")
 public class ArthurUdaf {
 
-    @UdafFactory(description = "collect")
+    @UdafFactory(description = "arthur")
     public static TableUdaf<Long, List<Long>, Long> create() {
 
         return new TableUdaf<Long, List<Long>, Long>() {
