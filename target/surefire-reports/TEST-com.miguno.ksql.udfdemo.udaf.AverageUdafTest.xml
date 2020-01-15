@@ -61,10 +61,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageDoubles" time="0.012"/>
-  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageEmpty" time="0.001"/>
+  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageDoubles" time="0.013"/>
+  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageEmpty" time="0"/>
   <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAverageLongs" time="0.001"/>
   <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldAggregateLongs" time="0"/>
-  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldMergeAverages" time="0"/>
-  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldUndoSummedCountedValues" time="0.001"/>
+  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldMergeAverages" time="0.001"/>
+  <testcase classname="com.miguno.ksql.udfdemo.udaf.AverageUdafTest" name="shouldUndoSummedCountedValues" time="0"/>
 </testsuite>
