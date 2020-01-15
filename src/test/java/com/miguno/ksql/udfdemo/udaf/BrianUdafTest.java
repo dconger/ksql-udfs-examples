@@ -43,8 +43,15 @@ public class BrianUdafTest {
 			.field("OP", Schema.STRING_SCHEMA)
 			.build();
 
-		Struct debeziumStruct = new Struct(debeziumSchema);
+    Struct beforeStruct = new Struct(beforeSchema)
+        .put("UID", "123");
 
-		// debeziumStruct.put("OP", "d");
+    Struct afterStruct = new Struct(afterSchema)
+        .put("UID", "123");
+
+		Struct debeziumStruct = new Struct(debeziumSchema)
+      .put("BEFORE", beforeStruct)
+      .put("AFTER", afterStruct)
+  		.put("OP", "d");
   }
 }
