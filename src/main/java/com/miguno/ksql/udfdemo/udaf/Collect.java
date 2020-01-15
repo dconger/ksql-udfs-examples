@@ -14,9 +14,9 @@ import java.util.List;
 public class Collect {
 
     @UdafFactory(description = "collect")
-    public static TableUdaf<String, List<String>> create() {
+    public static TableUdaf<String, List<String>, List<String>> create() {
 
-        return new TableUdaf<String, List<String>>() {
+        return new TableUdaf<String, List<String>, List<String>>() {
 
             @Override
             public List<String> initialize() {
@@ -24,11 +24,16 @@ public class Collect {
             }
 
             @Override
-            public List<String> aggregate(final String value, final List<String> aggregate) {
-                if (!aggregate.contains(value)) {
-                    aggregate.add(value);
+            public List<String> aggregate(final String newValue, final List<String> aggregate) {
+                if (!aggregate.contains(newValue)) {
+                    aggregate.add(newValue);
                 }
                 return aggregate;
+            }
+
+            @Override
+            public List<String> map(final List<String> aggregate) {
+              return aggregate;
             }
 
             @Override
