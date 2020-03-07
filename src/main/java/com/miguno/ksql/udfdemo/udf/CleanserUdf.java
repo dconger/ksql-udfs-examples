@@ -38,7 +38,7 @@ public class CleanserUdf {
       description = "Clean the payload"
     )
     public Struct clean(
-        @UdfParameter(schema = "STRUCT <BEFORE STRUCT<uid VARCHAR>, AFTER STRUCT<uid VARCHAR>, OP VARCHAR>") final Struct PAYLOAD
+        @UdfParameter(schema = "STRUCT <BEFORE STRUCT<uid VARCHAR>, AFTER STRUCT<uid VARCHAR>, OP VARCHAR, DAN VARCHAR>") final Struct PAYLOAD
     ) {
         return new Struct(debeziumSchema)
                 .put(BEFORE, PAYLOAD.getStruct("BEFORE"))

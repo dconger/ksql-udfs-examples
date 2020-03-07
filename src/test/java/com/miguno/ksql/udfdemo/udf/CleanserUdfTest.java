@@ -15,6 +15,7 @@ public class CleanserUdfTest {
   private static final String BEFORE = "BEFORE";
   private static final String AFTER = "AFTER";
   private static final String DEBEZIUM = "DEBEZIUM";
+  private static final String PAYLOAD = "PAYLOAD";
 
   @Test
   public void shouldCleanse() {
@@ -29,6 +30,13 @@ public class CleanserUdfTest {
 			.field("UID", Schema.STRING_SCHEMA)
 			.build();
 
+    Schema payloadSchema = SchemaBuilder.struct().name(PAYLOAD)
+			.field("BEFORE", beforeSchema)
+			.field("AFTER", afterSchema)
+			.field("OP", Schema.STRING_SCHEMA)
+			.field("DAN", Schema.STRING_SCHEMA)
+			.build();
+
     Schema debeziumSchema = SchemaBuilder.struct().name(DEBEZIUM)
 			.field("BEFORE", beforeSchema)
 			.field("AFTER", afterSchema)
@@ -41,13 +49,19 @@ public class CleanserUdfTest {
     Struct afterStruct = new Struct(afterSchema)
         .put("UID", "123");
 
+		Struct payload = new Struct(payloadSchema)
+      .put("BEFORE", beforeStruct)
+      .put("AFTER", afterStruct)
+  		.put("OP", "d")
+  		.put("DAN", "dan");
+
 		Struct debeziumStruct = new Struct(debeziumSchema)
       .put("BEFORE", beforeStruct)
       .put("AFTER", afterStruct)
   		.put("OP", "d");
 
     // When/Then
-    assertThat(udf.clean(debeziumStruct)).isEqualTo(debeziumStruct);
+    assertThat(udf.clean(payload)).isEqualTo(debeziumStruct);
   }
 
 }
