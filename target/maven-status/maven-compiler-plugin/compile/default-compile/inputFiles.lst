@@ -1,3 +1,4 @@
+/Users/danielconger/Desktop/ksql-udf-examples/src/main/java/com/miguno/ksql/udfdemo/udf/CleanserUdf.java
 /Users/danielconger/Desktop/ksql-udf-examples/src/main/java/com/miguno/ksql/udfdemo/udaf/BrianUdaf.java
 /Users/danielconger/Desktop/ksql-udf-examples/src/main/java/com/miguno/ksql/udfdemo/udaf/ArthurUdaf.java
 /Users/danielconger/Desktop/ksql-udf-examples/src/main/java/com/miguno/ksql/udfdemo/udf/MultiplyUdf.java

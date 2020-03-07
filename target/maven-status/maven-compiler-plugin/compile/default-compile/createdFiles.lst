@@ -9,6 +9,7 @@ com/miguno/ksql/udfdemo/udaf/BrianUdaf.class
 com/miguno/ksql/udfdemo/udf/MultiplyUdf.class
 com/miguno/ksql/udfdemo/udaf/BrianUdaf$1.class
 com/miguno/ksql/udfdemo/udaf/ArthurUdaf.class
+com/miguno/ksql/udfdemo/udf/CleanserUdf.class
 com/miguno/ksql/udfdemo/udaf/AverageUdaf$2.class
 com/miguno/ksql/udfdemo/udaf/ArthurUdaf$1.class
 com/miguno/ksql/udfdemo/udaf/AverageUdaf.class

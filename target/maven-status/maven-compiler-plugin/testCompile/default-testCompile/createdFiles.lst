@@ -1,6 +1,7 @@
-com/miguno/ksql/udfdemo/udf/MultiplyUdfTest.class
 com/miguno/ksql/udfdemo/udaf/SumUdafTest.class
 com/miguno/ksql/udfdemo/udaf/AverageUdafTest.class
+com/miguno/ksql/udfdemo/udaf/ArthurUdafTest.class
+com/miguno/ksql/udfdemo/udf/MultiplyUdfTest.class
+com/miguno/ksql/udfdemo/udf/CleanserUdfTest.class
 com/miguno/ksql/udfdemo/udaf/CollectTest.class
 com/miguno/ksql/udfdemo/udaf/BrianUdafTest.class
-com/miguno/ksql/udfdemo/udaf/ArthurUdafTest.class
