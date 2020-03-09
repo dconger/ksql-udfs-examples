@@ -99,3 +99,8 @@ SELECT SUM_NULL(b1), SUM_NULL(d1), SUM_NULL(v) FROM numbers;
 # License
 
 See [LICENSE](LICENSE) for licensing information.
+
+## Thoughts
+Bring in as a String, second parameter should be a list of fields we want. Parse the string, then grab fields passed in as the second parameter. But is there anyway that we can specify the schema within the @Udf decorater?
+
+Maybe this just becomes
